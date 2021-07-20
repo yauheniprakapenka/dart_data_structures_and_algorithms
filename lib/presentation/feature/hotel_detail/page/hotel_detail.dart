@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:skillbox_http/data/api/hotels/models/hotel_detail/hotel_detail.dart';
-import 'package:skillbox_http/data/api/hotels/use_cases/get_hotel.dart';
+import 'package:skillbox_http/data/api/hotels/use_cases/fetch_hotel.dart';
 import 'package:skillbox_http/presentation/core/style/app_edge_insets_geometry.dart';
 import 'package:skillbox_http/presentation/core/style/app_text_style.dart';
 import 'package:skillbox_http/presentation/core/style/ui_helper.dart';
@@ -28,7 +28,7 @@ class HotelDetailPage extends StatelessWidget {
     final uuid = routeSettings.arguments as String;
 
     return FutureBuilder(
-      future: getHotel(uuid),
+      future: fetchHotel(uuid),
       builder: (context, snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:

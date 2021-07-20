@@ -39,4 +39,4 @@ https://run.mocky.io/v3/${uuid}.
 
 Демонстрация приложения:
 
-<img src="files/result.gif" width=200>
+<img src="files/result.gif" width=500>

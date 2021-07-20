@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skillbox_http/data/api/hotels/models/hotel/hotel.dart';
-import 'package:skillbox_http/data/api/hotels/use_cases/get_hotels.dart';
+import 'package:skillbox_http/data/api/hotels/use_cases/fetch_hotels.dart';
 import 'package:skillbox_http/presentation/core/style/app_padding.dart';
 import 'package:skillbox_http/presentation/widgets/cards/square_card.dart';
 import 'package:skillbox_http/presentation/widgets/cards/rectangle_card.dart';
