@@ -1,4 +1,4 @@
-part of '../page/hotel_detail.dart';
+part of '../page/hotel_detail_page.dart';
 
 Widget _buildPhotos(BuildContext context, List<String> photos) {
   final screenSize = MediaQuery.of(context).size;
@@ -28,30 +28,6 @@ Widget _buildPhotos(BuildContext context, List<String> photos) {
             },
             itemCount: photos.length),
       ),
-      // CarouselSlider(
-      //   options: CarouselOptions(height: 200.0),
-      //   items: photos.map((name) {
-      //     return Builder(
-      //       builder: (BuildContext context) {
-      //         return Container(
-      //           width: MediaQuery.of(context).size.width,
-      //           margin: EdgeInsets.symmetric(horizontal: 5.0),
-      //           child: Container(
-      //             width: photoWidth,
-      //             decoration: BoxDecoration(
-      //               image: DecorationImage(
-      //                 fit: BoxFit.cover,
-      //                 image: AssetImage(
-      //                   'assets/images/$name',
-      //                 ),
-      //               ),
-      //             ),
-      //           ),
-      //         );
-      //       },
-      //     );
-      //   }).toList(),
-      // ),
       UIHelper.verticalPadding,
     ],
   );

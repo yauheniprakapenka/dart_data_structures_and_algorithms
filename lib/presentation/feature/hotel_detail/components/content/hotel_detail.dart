@@ -1,6 +1,6 @@
-part of '../page/hotel_detail.dart';
+part of '../../page/hotel_detail_page.dart';
 
-Widget _buildSuccessResult(
+Widget _buildHotelDetail(
   BuildContext context,
   HotelDetailDTO hotelDetail,
 ) {

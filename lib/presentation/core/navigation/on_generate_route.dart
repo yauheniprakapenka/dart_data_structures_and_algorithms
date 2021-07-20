@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:skillbox_http/presentation/core/constants/route_name.dart';
-import 'package:skillbox_http/presentation/feature/hotel_detail/page/hotel_detail.dart';
-import 'package:skillbox_http/presentation/feature/hotel_list/page/hotel_list_page.dart';
+import 'package:skillbox_http/presentation/feature/hotel_detail/page/hotel_detail_page.dart';
+import 'package:skillbox_http/presentation/feature/hotels/page/hotels_page.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
-    case RouteName.hotelListPage:
+    case RouteName.hotelsPage:
       return MaterialPageRoute(
         builder: (context) {
-          return HotelListPage();
+          return HotelsPage();
         },
       );
     case RouteName.hotelDetailPage:
@@ -22,7 +22,7 @@ Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {
     default:
       return MaterialPageRoute(
         builder: (context) {
-          return HotelListPage();
+          return HotelsPage();
         },
       );
   }

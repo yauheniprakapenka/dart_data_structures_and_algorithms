@@ -1,4 +1,4 @@
-part of '../page/hotel_detail.dart';
+part of '../page/hotel_detail_page.dart';
 
 Widget _buildServiceTitle(HotelDetailDTO hotelDetail) {
   return Column(

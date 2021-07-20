@@ -1,13 +1,14 @@
-part of '../page/hotel_list_page.dart';
+part of '../../page/hotels_page.dart';
 
-Widget _buildSquareCards(List<HotelDTO> hotels) {
+Widget _buildRectangleCards(List<HotelDTO> hotels) {
   return SliverGrid.count(
-    crossAxisCount: 2,
+    crossAxisCount: 1,
     crossAxisSpacing: AppPadding.cardPadding,
     mainAxisSpacing: AppPadding.cardPadding,
+    childAspectRatio: 1.7,
     children: List.generate(
       hotels.length,
-      (index) => SquareCard(
+      (index) => RectangleCard(
         hotel: hotels[index],
       ),
     ),

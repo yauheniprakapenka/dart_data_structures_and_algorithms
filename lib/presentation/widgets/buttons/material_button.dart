@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:skillbox_http/presentation/core/constants/strings/buttons.dart';
+import 'package:skillbox_http/presentation/core/style/app_color.dart';
 import 'package:skillbox_http/presentation/core/style/app_size.dart';
 
 class CustomMaterialButton extends StatelessWidget {
@@ -14,13 +16,13 @@ class CustomMaterialButton extends StatelessWidget {
       height: AppSize.buttonSize,
       child: MaterialButton(
         child: Text(
-          'Подробнее',
+          ButtonsStrings.more,
           style: TextStyle(
-            color: Colors.white,
+            color: AppColor.fontColorOnBackground,
             fontSize: 12,
           ),
         ),
-        color: Colors.blue[400],
+        color: AppColor.mainColorPrimary,
         onPressed: () {
           onPressed();
         },

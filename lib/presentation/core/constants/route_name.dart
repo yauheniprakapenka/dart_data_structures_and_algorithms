@@ -1,4 +1,4 @@
 class RouteName {
-  static const hotelListPage = 'hotelListPage';
+  static const hotelsPage = 'hotelsPage';
   static const hotelDetailPage = 'hotelDetailPage';
 }

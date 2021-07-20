@@ -1,29 +1,33 @@
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skillbox_http/data/api/hotels/models/hotel/hotel.dart';
 import 'package:skillbox_http/data/api/hotels/use_cases/fetch_hotels.dart';
+import 'package:skillbox_http/domain/use_cases/hotel/get_hotels.dart';
+import 'package:skillbox_http/domain/utils/exception_handler.dart';
+import 'package:skillbox_http/presentation/core/constants/strings/error.dart';
 import 'package:skillbox_http/presentation/core/style/app_padding.dart';
+import 'package:skillbox_http/presentation/core/style/ui_helper.dart';
 import 'package:skillbox_http/presentation/widgets/cards/square_card.dart';
 import 'package:skillbox_http/presentation/widgets/cards/rectangle_card.dart';
 import 'package:http/http.dart';
 
-part '../components/rectangle_cards.dart';
-part '../components/cards_builder.dart';
-part '../components/square_cards.dart';
+part '../components/cards/rectangle_cards.dart';
+part '../components/cards/cards_builder.dart';
+part '../components/cards/square_cards.dart';
+part '../components/text/error_text.dart';
+part '../components/text/default_text.dart';
 
 enum CardView {
   rectangle,
   square,
 }
 
-class HotelListPage extends StatefulWidget {
+class HotelsPage extends StatefulWidget {
   @override
-  _HotelListPageState createState() => _HotelListPageState();
+  _HotelsPageState createState() => _HotelsPageState();
 }
 
-class _HotelListPageState extends State<HotelListPage> {
+class _HotelsPageState extends State<HotelsPage> {
   var _cardView = ValueNotifier<CardView>(CardView.square);
 
   @override
@@ -52,7 +56,13 @@ class _HotelListPageState extends State<HotelListPage> {
           ),
         ],
       ),
-      body: _buildCards(_cardView),
+      body: Padding(
+        padding: EdgeInsets.only(
+          left: AppPadding.cardPadding,
+          right: AppPadding.cardPadding,
+        ),
+        child: _buildCards(_cardView),
+      ),
     );
   }
 }
