@@ -12,7 +12,9 @@ void main() {
       node2.next = node3;
       expect(node1.toString(), '1 -> 2 -> 3');
     });
+  });
 
+  group('Linked list', () {
     test('A few push to linked list', () {
       final list = LinkedList<int>();
       list.push(3);
@@ -79,7 +81,7 @@ void main() {
       expect(middleNode?.value, null);
     });
 
-    test('Insert after to linkded list', () {
+    test('Insert after to linkded list with not empty tail', () {
       final list = LinkedList<int>();
       list.push(3);
       list.push(2);
@@ -87,6 +89,72 @@ void main() {
       final middleNode = list.nodeAt(1)!;
       list.insertAfter(middleNode, 42);
       expect(list.toString(), '1 -> 2 -> 42 -> 3');
+    });
+
+    test('Insert after to empty linkded list with empty tail', () {
+      final list = LinkedList<int>();
+      list.push(1);
+      final middleNode = list.nodeAt(0)!;
+      list.insertAfter(middleNode, 42);
+      expect(list.toString(), '1 -> 42');
+    });
+
+    test('Pop from not empty linked list', () {
+      final list = LinkedList<int>();
+      list.push(5);
+      list.push(4);
+      list.push(3);
+      final poppedValue = list.pop();
+      expect(poppedValue, 3);
+    });
+
+    test('Pop from empty linked list', () {
+      final list = LinkedList<int>();
+      final poppedValue = list.pop();
+      expect(poppedValue, null);
+    });
+
+    test('Tail is not empty after pop with a few push to linked list', () {
+      final list = LinkedList<int>();
+      list.push(5);
+      list.push(4);
+      list.push(3);
+      list.pop();
+      expect(list.tail?.value, 5);
+    });
+
+    test('Tail is empty after full pop from linked list', () {
+      final list = LinkedList<int>();
+      list.push(4);
+      list.push(3);
+      list.pop();
+      list.pop();
+      expect(list.tail?.value, null);
+    });
+
+    test('Remove last when linked list is not empty', () {
+      final list = LinkedList<int>();
+      list.push(5);
+      list.push(4);
+      list.push(3);
+      final removedValue = list.removeLast();
+      expect(removedValue, 5);
+    });
+
+    test('Remove last when linked list is empty', () {
+      final list = LinkedList<int>();
+      final removedValue = list.removeLast();
+      expect(removedValue, null);
+    });
+
+    test('Full Remove last when linked was not empty', () {
+      final list = LinkedList<int>();
+      list.push(4);
+      list.push(3);
+      list.removeLast();
+      list.removeLast();
+      expect(list.head, null);
+      expect(list.tail, null);
     });
   });
 }

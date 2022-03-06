@@ -41,6 +41,40 @@ class LinkedList<E> {
     return node.next!;
   }
 
+  /// Removing a value at the front of a linked list.
+  E? pop() {
+    final value = head?.value;
+    head = head?.next;
+    if (isEmpty) {
+      tail = null;
+    }
+    return value;
+  }
+
+  /// Removing From the End of a List.
+  E? removeLast() {
+    /// If the list only consists of one node, [removeLast] is functionally
+    /// equivalent to [pop]. Since pop will handle updating the head and tail
+    /// references, you’ll just delegate this work. pop will also handle the
+    /// case of an empty list.
+    if (head?.next == null) return pop();
+
+    /// You start at the beginning and keep searching the nodes until 
+    /// [current.next] is tail. This signifies that current is the node right 
+    /// before tail.
+    var current = head;
+    while (current!.next != tail) {
+      current = current.next;
+    }
+
+    /// You collect the return value from the tail and after that rewire 
+    /// the node before the tail to be the new tail.
+    final value = tail?.value;
+    tail = current;
+    tail?.next = null;
+    return value;
+  }
+
   @override
   String toString() {
     if (isEmpty) return 'Empty list';
