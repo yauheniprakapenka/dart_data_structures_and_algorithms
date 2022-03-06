@@ -3,29 +3,29 @@ import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
 void main() {
-  group('Reverse list', () {
+  group('Reverse list v1', () {
     test('Empty list', () {
-      final actual = reverseList([]);
+      final actual = reverseListV1([]);
       expect(actual, []);
     });
 
     test('Minimal odd', () {
-      final actual = reverseList(['a', 'b', 'c']);
+      final actual = reverseListV1(['a', 'b', 'c']);
       expect(actual, ['c', 'b', 'a']);
     });
 
      test('Minimal even', () {
-      final actual = reverseList(['a', 'b']);
+      final actual = reverseListV1(['a', 'b']);
       expect(actual, ['b', 'a']);
     });
 
     test('Odd', () {
-      final actual = reverseList(['t', 'o', 'k', 'i', 'o']);
+      final actual = reverseListV1(['t', 'o', 'k', 'i', 'o']);
       expect(actual, ['o', 'i', 'k', 'o', 't']);
     });
 
     test('Even', () {
-      final actual = reverseList(['a', 'b', 'c', 'd', 'e', 'f']);
+      final actual = reverseListV1(['a', 'b', 'c', 'd', 'e', 'f']);
       expect(actual, ['f', 'e', 'd', 'c', 'b', 'a']);
     });
   });

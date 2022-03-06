@@ -5,7 +5,7 @@ class Stack<E> {
 
   void push(E element) => _storage.add(element);
 
-  void pop() => _storage.removeLast();
+  E pop() => _storage.removeLast();
 
   /// To look at the top element of the stack without mutating its contents.
   E get peek => _storage.last;
