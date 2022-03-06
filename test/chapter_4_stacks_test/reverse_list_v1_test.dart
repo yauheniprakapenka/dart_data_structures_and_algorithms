@@ -1,4 +1,4 @@
-import 'package:dart_algoritms/src/chapter_4_stacks/reverse_list.dart';
+import 'package:dart_algoritms/src/chapter_4_stacks/challenge_reverse_list.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 

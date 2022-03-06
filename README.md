@@ -30,5 +30,5 @@ open coverage/html/index.html
 ```
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/47568606/156897033-d7d24a7e-ddd7-4c3d-9be4-9ed3a8ea2cba.png" height="180">
+    <img src="https://user-images.githubusercontent.com/47568606/156918081-e956c706-8341-4963-9d08-ceeeae74418d.png" height="180">
 </p>

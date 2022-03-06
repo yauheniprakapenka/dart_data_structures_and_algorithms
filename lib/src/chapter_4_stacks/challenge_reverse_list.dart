@@ -2,7 +2,6 @@
 // Create a function that prints the contents of a list in reverse order.
 
 // Мой вариант 1
-import 'package:dart_algoritms/algoritms.dart';
 
 List reverseListV1(List list) {
   if (list.isEmpty) return [];
@@ -35,14 +34,14 @@ List<T> reverseListV2<T>(List<T> elements) {
 // Ответ из книги
 //
 // Time complexity is O(n)
-void printInReverse<E>(List<E> list) {
-  var stack = Stack<E>();
+// void printInReverse<E>(List<E> list) {
+//   var stack = Stack<E>();
 
-  for (E value in list) {
-    stack.push(value);
-  }
+//   for (E value in list) {
+//     stack.push(value);
+//   }
 
-  while (stack.isNotEmpty) {
-    print(stack.pop());
-  }
-}
+//   while (stack.isNotEmpty) {
+//     print(stack.pop());
+//   }
+// }
